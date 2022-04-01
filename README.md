@@ -1,5 +1,5 @@
 # etherpad
-My own etherpad configuration
+My own etherpad configuration built using advice from [HowToForge](https://www.howtoforge.com/tutorial/ubuntu-etherpad-editor-server-installation/) and [DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-the-etherpad-collaborative-web-editor-on-ubuntu-20-04). 
 
 ### Instructions
 ##### MariaDB
