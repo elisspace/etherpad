@@ -1,0 +1,25 @@
+# place in /etc/systemd/system/etherpad.service
+# then run the following commands:
+### sudo systemctl daemon-reload
+### sudo systemctl enable etherpad
+### sudo systemctl start etherpad
+# and check via
+### sudo systemctl status etherpad
+
+[Unit]
+Description=Etherpad-lite, the collaborative editor.
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=etherpad
+Group=etherpad
+WorkingDirectory=/opt/etherpad/etherpad-lite
+Environment=NODE_ENV=production
+
+ExecStart=/usr/bin/node /opt/etherpad/etherpad-lite/src/node/server.js
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
